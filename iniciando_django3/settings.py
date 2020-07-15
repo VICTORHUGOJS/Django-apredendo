@@ -55,7 +55,7 @@ ROOT_URLCONF = 'iniciando_django3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')], #config templates, caminho.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
