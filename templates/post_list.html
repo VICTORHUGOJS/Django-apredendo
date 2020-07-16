@@ -1,9 +1,12 @@
-<h1> Lista de post </h1>
-  <ul>
-    {% for post in posts  %}
-        <li>{{ post.title  }}</li>
-       
-    {% endfor %}
+{% extends 'layout.html' %}
 
-  
-  </ul>
+{% block content %}
+  <h1> Lista de post </h1>
+    <ul>
+      {% for post in posts  %}
+        <li>  
+          <a href="{% url 'post_show'  post.id %}">{{ post.title  }}</a> 
+        </li>
+      {% endfor %}
+    </ul>
+{% endblock %}

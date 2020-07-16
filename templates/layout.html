@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Blog da School of Net</h1>
+<nav>
+    <a href="{% url 'post_list' %} ">Listar posts</a>
+</nav>
+Categorias
+<nav>
+    {% for category in categories %}
+        <a href="{% url 'post_list' %?category_id={{ category_id }}"> {{category.name }} </a>
+    {% endfor %}
+</nav>
+{% block content %} {% endblock %}
+</body>
+</html>
